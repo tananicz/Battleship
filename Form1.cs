@@ -18,7 +18,7 @@ namespace Battleship
                 for (int y = 0; y < GameConfig.BoardSize; y++)
                 {
                     Rectangle rect = new Rectangle(new Point(x * 20, y * 20), new Size(20, 20));
-                    Brush b = player.IsShip(x, y) ? Brushes.Red : Brushes.Blue;
+                    Brush b = player.HasShip(x, y) ? Brushes.Red : Brushes.Blue;
                     g.FillRectangle(b, rect);
                 }
         }
