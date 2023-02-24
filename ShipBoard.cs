@@ -25,8 +25,12 @@ namespace Battleship
         public ShipBoard()
         {
             for (int row = 0; row < GameConfig.BoardSize; row++)
+            {
                 for (int col = 0; col < GameConfig.BoardSize; col++)
+                {
                     shipsBoard[col, row] = ShipBoardCube.Nothing;
+                }
+            }
 
             DistributeShips();
         }

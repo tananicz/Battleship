@@ -28,31 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.startBtn = new System.Windows.Forms.Button();
+            this.gameStatusTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // startBtn
             // 
-            this.button1.Location = new System.Drawing.Point(36, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.startBtn.Location = new System.Drawing.Point(231, 394);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(123, 31);
+            this.startBtn.TabIndex = 0;
+            this.startBtn.Text = "Start";
+            this.startBtn.UseVisualStyleBackColor = true;
+            this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
+            // 
+            // gameStatusTextBox
+            // 
+            this.gameStatusTextBox.Location = new System.Drawing.Point(32, 313);
+            this.gameStatusTextBox.Multiline = true;
+            this.gameStatusTextBox.Name = "gameStatusTextBox";
+            this.gameStatusTextBox.Size = new System.Drawing.Size(534, 63);
+            this.gameStatusTextBox.TabIndex = 1;
+            this.gameStatusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 467);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.gameStatusTextBox);
+            this.Controls.Add(this.startBtn);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Battleships";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private TextBox gameStatusTextBox;
+        private Button startBtn;
     }
 }
