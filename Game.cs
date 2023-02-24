@@ -44,7 +44,6 @@ namespace Battleship
             {
                 report += (Environment.NewLine + $"And it happens that {actualPlayer.Name} wins! GAME OVER!");
                 gfxPainter.DrawGame(player1, player2, report);
-
                 return false;
             }
             else 
