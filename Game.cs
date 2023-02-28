@@ -38,20 +38,25 @@ namespace Battleship
 
         public bool NextMove()
         {
-            String report = actualPlayer.ShootAt(opponent);
+            if (null != actualPlayer && null != opponent)
+            {
+                String report = actualPlayer.ShootAt(opponent);
 
-            if (actualPlayer.IsWinner())
-            {
-                report += (Environment.NewLine + $"And it happens that {actualPlayer.Name} wins! GAME OVER!");
-                gfxPainter.DrawGame(player1, player2, report);
+                if (actualPlayer.IsWinner())
+                {
+                    report += (Environment.NewLine + $"And it happens that {actualPlayer.Name} wins! GAME OVER!");
+                    gfxPainter.DrawGame(player1, player2, report);
+                    return false;
+                }
+                else
+                {
+                    gfxPainter.DrawGame(player1, player2, report);
+                    SwitchActualPlayers();
+                    return true;
+                }
+            }
+            else
                 return false;
-            }
-            else 
-            {
-                gfxPainter.DrawGame(player1, player2, report);
-                SwitchActualPlayers();
-                return true;
-            }
         }
 
         private void SwitchActualPlayers()
