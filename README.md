@@ -13,7 +13,7 @@ The procedure is as follows:
 2. Let's assume that horizontal orientation was drawn in the previous step - the current one randomly selects some row of the board.
 
 3. That row is then checked for "segments" of free space that would allow a new ship to be placed within - please observe that useMargins is set to true and 
-"reserved" grids are treated the same way as if there was a ship placed in the past.
+"reserved" grids are treated the same way as if there was a ship present.
 
 4. If the new ship can be placed within one of the segments it is placed there and the whole procedure is over. If however it is impossible to place our ship in any
 segment, a new row number is selected from among the other, unchecked ones and we go back to point 3.
