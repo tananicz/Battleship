@@ -16,7 +16,7 @@ The procedure is as follows:
 "reserved" grids are treated the same way as if there was a ship present.
 
 4. If the new ship can be placed within one of the segments it is placed there and the whole procedure is over. If however it is impossible to place our ship in any
-segment, a new row number is selected from among the other, unchecked ones and we go back to point 3.
+segment, a new row number is selected from among the remaining ones and we go back to point 3.
 
 5. If all the rows were examined for the possibility of placing a ship and no free space was found, the orientation is then switched to the other one (vertical in
 our case) and we go back to point 2.
