@@ -2,10 +2,10 @@
 {
     internal class Game
     {
-        private Player player1 = null;
-        private Player player2 = null;
-        private Player actualPlayer = null;
-        private Player opponent = null;
+        private Player player1;
+        private Player player2;
+        private Player actualPlayer;
+        private Player opponent;
         private Random random = new Random();
         private GraphicsPainter gfxPainter;
 
